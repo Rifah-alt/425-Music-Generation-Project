@@ -136,15 +136,13 @@ Loss: CrossEntropy   Metric: Perplexity = exp(avg cross-entropy)
 Generation: seed token → top-k sampling (k=50, T=1.0) → 1024 tokens
 ```
 
-## TASK 4 — RLHF 
-
-### Theory 
-- **Policy** = the Task 3 Transformer generating token sequences
-- **Action** = each sampled token is one action in the MDP
-- **State** = all tokens generated so far (the context window)
-- **Reward** = human rating r ∈ [1,5], normalized to [-1,1]
-- **REINFORCE gradient**: `∇θJ(θ) = (1/N) Σ r̂ · ∇θ log pθ(X)`
-- **KL penalty**: `J'(θ) = E[r] - λ · KL(pθ || pθ₀)` prevents reward hacking
+### Task 4 — RLHF 
+```
+Task 3 Transformer (frozen θ₀) → Generate sequences X ~ pθ(·)
+Reward Model: trained on human feedback r ∈ [1,5] → normalized [-1,1]
+Policy Loss: E[r · ∇θ log pθ(X)] - λ·KL(pθ || pθ₀)
+Generation: seed token → top-k sampling (k=50, T=1.0) → RLHF-tuned 1024 tokens
+```
 
 
 ## METRIC REFERENCE
