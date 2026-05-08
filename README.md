@@ -147,13 +147,20 @@ Generation: seed token → top-k sampling (k=50, T=1.0) → RLHF-tuned 1024 toke
 
 ## METRIC REFERENCE
 
+| Metric | Formula | Good range |
+|--------|---------|-----------|
+| Pitch Hist Sim | Σ\|p_i - q_i\| | Lower = better (0=identical) |
+| Rhythm Diversity | unique_durations / total_notes | Higher = more variety |
+| Repetition Ratio | repeated 4-grams / total 4-grams | 0.1–0.5 = coherent |
+| Perplexity | exp(avg cross-entropy) | Lower = better |
+| Human Score | mean rating 1–5 | Higher = better |
 
 
 ## MEMBER CONTRIBUTION
 ```
-Team Member 1 (Zarin Tasnim Vega)
+Team Member 1 (22201039_Zarin Tasnim Vega)
 
-Domain: Piano-Roll Representations, Autoencoders, and Generative Latent Spaces
+Contribution: Piano-Roll Representations, Autoencoders and Generative Latent Spaces
 
   - Data Pipeline: Implemented the pretty_midi piano-roll extraction, including
     the sparsity filtering logic (discarding windows with <2% active cells) and
@@ -173,9 +180,9 @@ Domain: Piano-Roll Representations, Autoencoders, and Generative Latent Spaces
     and Discussion sections regarding sparsity, focal loss, and posterior
     collapse.
 
-Team Member 2 (Rifah Tasnim Labonno)
+Team Member 2 (22201040_Rifah Tasnim Labonno)
 
-Domain: Token Sequences, Autoregressive Modeling, and Reinforcement Learning
+Contribution: Token Sequences, Autoregressive Modeling and Reinforcement Learning
 
   - Data Pipeline & Baselines: Implemented the miditok REMI tokenization
     pipeline. Coded the two baseline models (Random Note Generator and Markov
