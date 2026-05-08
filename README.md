@@ -85,34 +85,6 @@ cse425_music/
 
 Used Windows Media Player
 
-## COMMON PROBLEMS & FIXES
-
-### CUDA out of memory
-Reduce `BATCH_SIZE` from 32 → 16 in the relevant script.
-
-### All generated MIDI files are silent
-- Lower the generation threshold: change `threshold=0.3` → `threshold=0.1`
-- Check the loss curve — if it plateaued from epoch 1, the pos_weight needs tuning
-
-### miditok import error (Task 3)
-```bash
-pip install miditok symusic
-```
-
-### MAESTRO files raise parsing errors
-Normal — a handful of files are malformed. The scripts skip them automatically.
-
-### Loss is NaN
-- Gradient explosion: already handled by `clip_grad_norm_(max_norm=1.0)`
-- Double sigmoid: do NOT add `torch.sigmoid()` to model output — the loss function does it internally
-
-### Task 3 generates gibberish
-- Verify causal mask is active (it is by default in the code)
-- Try lowering `TEMPERATURE` to 0.8 for more coherent output
-- Train for more epochs if perplexity is still high after 40
-
----
-
 ## ARCHITECTURE SUMMARY
 
 ### Task 1 — LSTM Autoencoder
