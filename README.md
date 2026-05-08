@@ -180,7 +180,7 @@ Contribution: Token Sequences, Autoregressive Modeling and Reinforcement Learnin
 ## DRIVE LINK OF MIDI OUTPUTS
 ```
 
-https://drive.google.com/drive/folders/1waeRpQ2LSkVVgfQk7hSo0nj7RdD44KFZ?usp=sharing
+https://drive.google.com/drive/folders/1waeRpQ2LSkVVgfQk7hSo0nj7RdD44KFZ?usp=drive_link
 
 ```
 
@@ -188,4 +188,4 @@ https://drive.google.com/drive/folders/1waeRpQ2LSkVVgfQk7hSo0nj7RdD44KFZ?usp=sha
 ```
 https://drive.google.com/file/d/1GugTiI-VIr6lm-LHhKX9byutHi3iXaX7/view?usp=sharing
 ```
-```
+
