@@ -149,7 +149,7 @@ Generation: seed token → top-k sampling (k=50, T=1.0) → RLHF-tuned 1024 toke
 
 
 
-###MEMBER CONTRIBUTION
+##MEMBER CONTRIBUTION
 ...
 Team Member 1 (Zarin Tasnim Vega)
 
