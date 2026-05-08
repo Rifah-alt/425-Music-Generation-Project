@@ -2,17 +2,6 @@
 TASK 4: Reinforcement Learning from Human Feedback (RLHF)
         REINFORCE Policy Gradient Fine-Tuning of Task 3 Transformer
 
-Theory basis (from linked articles):
-  Policy   : pθ(X) = the Task 3 Transformer — our "agent" that generates music
-  Action   : each autoregressively sampled token is one action
-  State    : the sequence of tokens generated so far
-  Reward   : human listening score r ∈ [1,5], normalized to [-1,1]
-  Objective: max J(θ) = E[r(X_gen)]
-  Update   : ∇θJ(θ) = (1/N) Σᵢ r̂^(i) · ∇θ log pθ(X^(i))   (REINFORCE)
-  KL Penalty (prevents reward hacking):
-    J'(θ) = E[r] - λ · KL(pθ || pθ₀)
-    where pθ₀ is the frozen reference (original Task 3 weights)
-
 """
 
 import os, math, json, random, numpy as np
@@ -62,9 +51,7 @@ if DEVICE.type == "cuda":
     print(f"GPU   : {torch.cuda.get_device_name(0)}")
 
 
-# ════════════════════════════════════════════════════════════════════════════
 #  MODULE 1 — Transformer (identical to Task 3)
-# ════════════════════════════════════════════════════════════════════════════
 
 class PositionalEncoding(nn.Module):
     def __init__(self, d_model, dropout=0.1, max_len=2048):
