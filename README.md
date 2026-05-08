@@ -150,7 +150,7 @@ Generation: seed token → top-k sampling (k=50, T=1.0) → RLHF-tuned 1024 toke
 
 
 ##MEMBER CONTRIBUTION
-...
+```
 Team Member 1 (Zarin Tasnim Vega)
 
 Domain: Piano-Roll Representations, Autoencoders, and Generative Latent Spaces
@@ -196,4 +196,4 @@ Domain: Token Sequences, Autoregressive Modeling, and Reinforcement Learning
     Evaluation Metrics), Results (Tasks 3 & 4, Quantitative Comparison), and the
     corresponding Discussion (Reward hacking, causal masking) and Conclusion.
 
-...
+```
