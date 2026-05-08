@@ -147,10 +147,53 @@ Generation: seed token → top-k sampling (k=50, T=1.0) → RLHF-tuned 1024 toke
 
 ## METRIC REFERENCE
 
-| Metric | Formula | Good range |
-|--------|---------|-----------|
-| Pitch Hist Sim | Σ\|p_i - q_i\| | Lower = better (0=identical) |
-| Rhythm Diversity | unique_durations / total_notes | Higher = more variety |
-| Repetition Ratio | repeated 4-grams / total 4-grams | 0.1–0.5 = coherent |
-| Perplexity | exp(avg cross-entropy) | Lower = better |
-| Human Score | mean rating 1–5 | Higher = better |
+
+
+###MEMBER CONTRIBUTION
+...
+Team Member 1 (Zarin Tasnim Vega)
+
+Domain: Piano-Roll Representations, Autoencoders, and Generative Latent Spaces
+
+  - Data Pipeline: Implemented the pretty_midi piano-roll extraction, including
+    the sparsity filtering logic (discarding windows with <2% active cells) and
+    EDA visualizations (duration and pitch histograms).
+  - Task 1 (LSTM Autoencoder): Designed the Encoder/Decoder architecture.
+    Identified the piano-roll sparsity problem and successfully implemented the
+    Focal Loss function (with w^+ = 20) to prevent the model from collapsing to
+    silence.
+  - Task 2 (Variational Autoencoder): Implemented the reparameterization trick
+    and the KL divergence loss. Diagnosed posterior collapse and implemented KL
+    Annealing (30-epoch warmup) to fix it.
+  - Experiments & Visuals: Coded the latent space interpolation experiment
+    (generating intermediate samples z_\alpha) and generated the AE/VAE loss
+    curves and interpolation heatmaps.
+  - Report Writing: Authored the Abstract, Introduction, Dataset & Preprocessing
+    (Piano-roll section), Methods (Tasks 1 & 2), and the corresponding Results
+    and Discussion sections regarding sparsity, focal loss, and posterior
+    collapse.
+
+Team Member 2 (Rifah Tasnim Labonno)
+
+Domain: Token Sequences, Autoregressive Modeling, and Reinforcement Learning
+
+  - Data Pipeline & Baselines: Implemented the miditok REMI tokenization
+    pipeline. Coded the two baseline models (Random Note Generator and Markov
+    Chain) for comparative evaluation.
+  - Task 3 (Transformer Generator): Built the GPT-style decoder-only
+    Transformer. Implemented the absolute positional encodings, the crucial
+    upper-triangular causal mask, and the temperature/top-k sampling generation
+    loops.
+  - Task 4 (RLHF): Built the entire RLHF pipeline. Created the proxy reward
+    feature extractor, trained the Reward Model, and implemented the REINFORCE
+    policy gradient algorithm with batch normalization and the reference-policy
+    KL penalty to prevent reward hacking.
+  - Evaluation & Visuals: Authored the comprehensive metrics.py script
+    (calculating Pitch Similarity, Rhythm Diversity, Repetition Ratio, and
+    Perplexity). Conducted the Human Listening Survey and generated the RLHF
+    training curves and final comparison tables.
+  - Report Writing: Authored the Related Work, Methods (Tasks 3 & 4, Baselines,
+    Evaluation Metrics), Results (Tasks 3 & 4, Quantitative Comparison), and the
+    corresponding Discussion (Reward hacking, causal masking) and Conclusion.
+
+...
