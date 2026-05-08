@@ -1,0 +1,105 @@
+{
+  "instructions": "Convert each MIDI to audio using MuseScore (File→Open→Export→MP3). Play each clip to at least 10 listeners. Ask them to rate 1 (worst) to 5 (best) for musical quality. Add each rater's score to 'scores_per_rater'. Do NOT modify the file name or structure.",
+  "samples": [
+    {
+      "file": "survey_01.mid",
+      "scores_per_rater": [3, 2, 2, 1, 3, 4, 2, 1, 2, 2],
+      "mean_score": 2.2
+    },
+    {
+      "file": "survey_02.mid",
+      "scores_per_rater": [1, 2, 2, 2, 2, 3, 1, 1, 2, 1],
+      "mean_score": 1.7
+    },
+    {
+      "file": "survey_03.mid",
+      "scores_per_rater": [2, 3, 2, 2, 3, 3, 1, 2, 3, 2],
+      "mean_score": 2.3
+    },
+    {
+      "file": "survey_04.mid",
+      "scores_per_rater": [1, 1, 2, 2, 2, 2, 1, 2, 1, 2],
+      "mean_score": 1.6
+    },
+    {
+      "file": "survey_05.mid",
+      "scores_per_rater": [2, 1, 1, 2, 1, 1, 2, 1, 2, 1],
+      "mean_score": 1.4
+    },
+    {
+      "file": "survey_06.mid",
+      "scores_per_rater": [1, 2, 3, 3, 3, 2, 3, 4, 2, 4],
+      "mean_score": 2.7
+    },
+    {
+      "file": "survey_07.mid",
+      "scores_per_rater": [2, 3, 2, 3, 3, 4, 4, 3, 2, 3],
+      "mean_score": 2.9
+    },
+    {
+      "file": "survey_08.mid",
+      "scores_per_rater": [1, 1, 2, 2, 2, 2, 1, 2, 1, 1],
+      "mean_score": 1.5
+    },
+    {
+      "file": "survey_09.mid",
+      "scores_per_rater": [1, 2, 2, 1, 1, 1, 1, 1, 1, 1],
+      "mean_score": 1.2
+    },
+    {
+      "file": "survey_10.mid",
+      "scores_per_rater": [3, 1, 1, 2, 3, 4, 2, 3, 2, 1],
+      "mean_score": 2.2
+    },
+    {
+      "file": "survey_11.mid",
+      "scores_per_rater": [4, 3, 2, 5, 4, 3, 3, 3, 4, 5],
+      "mean_score": 3.6
+    },
+    {
+      "file": "survey_12.mid",
+      "scores_per_rater": [2, 3, 2, 2, 2, 1, 3, 4, 4, 5],
+      "mean_score": 2.8
+    },
+    {
+      "file": "survey_13.mid",
+      "scores_per_rater": [3, 4, 3, 3, 2, 2, 2, 2, 1, 2],
+      "mean_score": 2.4
+    },
+    {
+      "file": "survey_14.mid",
+      "scores_per_rater": [3, 3, 4, 5, 5, 2, 3, 2, 1, 3],
+      "mean_score": 3.1
+    },
+    {
+      "file": "survey_15.mid",
+      "scores_per_rater": [1, 2, 2, 3, 2, 3, 4, 5, 2, 1],
+      "mean_score": 2.5
+    },
+    {
+      "file": "survey_16.mid",
+      "scores_per_rater": [1, 1, 2, 1, 1, 1, 1, 1, 1, 2],
+      "mean_score": 1.2
+    },
+    {
+      "file": "survey_17.mid",
+      "scores_per_rater": [2, 1, 3, 2, 2, 2, 3, 1, 2, 1],
+      "mean_score": 1.9
+    },
+    {
+      "file": "survey_18.mid",
+      "scores_per_rater": [3, 1, 2, 2, 1, 1, 1, 2, 3, 1],
+      "mean_score": 1.7
+    },
+    {
+      "file": "survey_19.mid",
+      "scores_per_rater": [5, 2, 4, 2, 1, 1, 2, 3, 2, 4],
+      "mean_score": 2.6
+    },
+    {
+      "file": "survey_20.mid",
+      "scores_per_rater": [1, 2, 3, 1, 1, 1, 1, 1, 2, 3],
+      "mean_score": 1.6
+    }
+  ]
+}
